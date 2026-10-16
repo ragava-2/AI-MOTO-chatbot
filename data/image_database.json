@@ -1,0 +1,702 @@
+{
+  "components": {
+    "battery": {
+      "id": "battery",
+      "name": "Vehicle Battery",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/battery.jpg",
+      "category": "Electrical System",
+      "keywords": [
+        "battery", "car battery", "bike battery", "12v battery", "lead acid", "agm battery", 
+        "battery dead", "battery drain", "battery jump", "பேட்டரி", "மின் கலன்"
+      ],
+      "specifications": {
+        "Nominal Voltage": "12.6V DC (Fully Charged)",
+        "Charging Voltage": "13.8V - 14.4V (Engine Running)",
+        "Capacity": "4Ah - 9Ah (Bikes), 35Ah - 70Ah (Cars)",
+        "Chemistry": "Lead-Acid / AGM / Lithium-Ion"
+      },
+      "price_estimate": {
+        "inr": "₹1,200 - ₹5,500",
+        "usd": "$20 - $85",
+        "note": "Bike batteries: ₹1,200 - ₹2,500; Car batteries: ₹3,500 - ₹6,500"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Rapid clicking sound or silence when pressing start button / turning key",
+          "Headlights dim noticeably when cranking engine",
+          "Battery warning light illuminated on dashboard instrument cluster",
+          "Voltage drops below 10V during starter crank"
+        ],
+        "checks": [
+          "Check resting terminal voltage with multimeter (healthy is >= 12.6V)",
+          "Inspect terminal posts for blue/white powdery sulfation corrosion",
+          "Verify alternator/stator charging rate (13.8V to 14.4V at 2,500 RPM)"
+        ]
+      },
+      "safety_guidance": "Always disconnect negative (-) terminal first and reconnect it last to avoid catastrophic short circuits. Battery acid is highly corrosive—wear eye protection."
+    },
+    "spark_plug": {
+      "id": "spark_plug",
+      "name": "Spark Plug",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/spark_plug.jpg",
+      "category": "Ignition System",
+      "keywords": [
+        "spark plug", "sparkplug", "spark plugs", "ignition plug", "plug", "ngk", "champion", 
+        "misfire", "rough idle", "தீப்பொறி", "ஸ்பார்க் பிளக்"
+      ],
+      "specifications": {
+        "Electrode Gap": "0.7mm - 0.9mm (Bikes), 0.8mm - 1.1mm (Cars)",
+        "Core Material": "Copper Core / Nickel / Platinum / Iridium",
+        "Thread Size": "M10, M12, M14",
+        "Typical Lifespan": "15,000 - 30,000 km (Copper) / 80,000 km (Iridium)"
+      },
+      "price_estimate": {
+        "inr": "₹120 - ₹950",
+        "usd": "$2 - $15",
+        "note": "Standard copper: ₹120 - ₹250; High-performance Iridium: ₹600 - ₹950"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Engine misfires under hard acceleration",
+          "Difficulty starting cold engine",
+          "Uneven, rough engine idling and rpm fluctuation",
+          "Sudden drop in fuel economy and throttle response"
+        ],
+        "checks": [
+          "Inspect ceramic insulator and electrode color (tan/grey is healthy; black is rich/soot)",
+          "Measure electrode gap clearance with a feeler gauge",
+          "Check for oil fouling from leaky valve stem seals or worn piston rings"
+        ]
+      },
+      "safety_guidance": "Wait until the engine cylinder head is completely cold before unscrewing spark plugs to prevent stripping sensitive aluminum cylinder head threads."
+    },
+    "brake_rotor": {
+      "id": "brake_rotor",
+      "name": "Brake Rotor (Disc)",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/brake_rotor.jpg",
+      "category": "Braking System",
+      "keywords": [
+        "brake rotor", "brake disc", "disc brake", "rotors", "brake plate", 
+        "disc warped", "vibration braking", "ரோட்டார்", "பிரேக் டிஸ்க்"
+      ],
+      "specifications": {
+        "Material": "Cast Grey Iron / Stainless Steel / Carbon Ceramic",
+        "Design": "Solid (Rear / Light Bikes) / Ventilated / Drilled & Slotted",
+        "Minimum Thickness Stamp": "Typically stamped on rotor hub (e.g. Min Th 4.0mm)"
+      },
+      "price_estimate": {
+        "inr": "₹750 - ₹4,500",
+        "usd": "$12 - $65",
+        "note": "Bike discs: ₹750 - ₹2,200; Car front ventilated rotors (pair): ₹2,500 - ₹5,000"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Pulsation or vibration felt in brake pedal or handlebar brake lever",
+          "Deep visible circular grooves or scoring lines on rotor face",
+          "Blue or purple thermal discoloration from extreme heat",
+          "Grinding metallic noise during deceleration"
+        ],
+        "checks": [
+          "Measure disc thickness with a digital micrometer against manufacturer minimum stamp",
+          "Use a dial gauge indicator to measure lateral runout (should be < 0.05 mm)",
+          "Inspect for hairline thermal stress cracks radiating from ventilation holes"
+        ]
+      },
+      "safety_guidance": "Never spray lubricants, WD-40, or grease anywhere near brake rotors. Only use dedicated residue-free brake cleaner spray."
+    },
+    "brake_pad": {
+      "id": "brake_pad",
+      "name": "Brake Pads",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/brake_pad.jpg",
+      "category": "Braking System",
+      "keywords": [
+        "brake pad", "brake pads", "brakepad", "front brake pad", "rear brake pad", 
+        "pad wear", "brake squeal", "பிரேக் பேட்"
+      ],
+      "specifications": {
+        "Material Types": "Organic / Semi-Metallic / Sintered / Ceramic",
+        "Minimum Safe Thickness": "3.0 mm friction material",
+        "Backplate": "Steel stamped with acoustic wear indicator clip"
+      },
+      "price_estimate": {
+        "inr": "₹250 - ₹2,800",
+        "usd": "$4 - $38",
+        "note": "Bike front pads: ₹250 - ₹900; Car axle set: ₹1,200 - ₹3,500"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "High-pitched squealing noise when lightly applying brakes",
+          "Harsh metal-on-metal scraping sound (friction material completely worn down)",
+          "Extended braking distance and spongy brake lever travel",
+          "Brake dust accumulating excessively on alloy wheels"
+        ],
+        "checks": [
+          "Inspect pad friction lining thickness through caliper inspection window",
+          "Check for uneven taper wear indicating stuck caliper slider pins",
+          "Check for glazed, mirror-like friction surfaces due to excessive riding the brake"
+        ]
+      },
+      "safety_guidance": "Replace brake pads immediately if lining is below 2mm. After fitting new pads, pump the brake lever/pedal several times to seat them before riding/driving."
+    },
+    "brake_caliper": {
+      "id": "brake_caliper",
+      "name": "Brake Caliper Assembly",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/brake_caliper.jpg",
+      "category": "Braking System",
+      "keywords": [
+        "brake caliper", "caliper", "brake piston", "bybre caliper", "nissin caliper", 
+        "brembo", "caliper leak", "caliper stuck", "பிரேக் காலிபர்"
+      ],
+      "specifications": {
+        "Type": "Floating Single/Twin Piston or Fixed 4/6 Piston",
+        "Fluid Compatibility": "DOT 3, DOT 4, or DOT 5.1 Glycol Ether",
+        "Seals": "High-temperature EPDM rubber square piston seal & dust boot"
+      },
+      "price_estimate": {
+        "inr": "₹1,100 - ₹6,500",
+        "usd": "$18 - $90",
+        "note": "Bike single caliper: ₹1,100 - ₹2,500; Car replacement caliper: ₹2,800 - ₹7,000"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Vehicle pulls to one side during braking",
+          "Brake dragging—wheel feels hot and does not spin freely when lifted",
+          "Brake fluid weeping around caliper piston dust seals or bleed nipple",
+          "Spongy pedal travel caused by air trapped in caliper chambers"
+        ],
+        "checks": [
+          "Inspect slide pins for free sliding movement and grease with high-temp silicone",
+          "Examine piston face for corrosion or pitting under the dust boot",
+          "Perform complete brake fluid flush and bleed to clear trapped air bubbles"
+        ]
+      },
+      "safety_guidance": "Brake fluid damages automotive paintwork rapidly. Wipe spills instantly with soapy water. Never mix mineral oil with DOT glycol brake fluid."
+    },
+    "radiator": {
+      "id": "radiator",
+      "name": "Engine Radiator",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/radiator.jpg",
+      "category": "Cooling System",
+      "keywords": [
+        "radiator", "coolant", "engine coolant", "radiator leak", "overheating", 
+        "coolant boil", "radiator fan", "ரேடியேட்டர்", "குளிர்விப்பான்"
+      ],
+      "specifications": {
+        "Core Construction": "Aluminum multi-tube and louvered fin design",
+        "Operating Pressure": "0.9 bar - 1.3 bar (13 - 18 PSI regulated by radiator cap)",
+        "Coolant Type": "50/50 mix of Ethylene Glycol / Distilled Water (OAT / HOAT)"
+      },
+      "price_estimate": {
+        "inr": "₹1,400 - ₹6,800",
+        "usd": "$20 - $95",
+        "note": "Bike radiator: ₹1,400 - ₹3,500; Car radiator: ₹2,800 - ₹7,500"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Engine temperature gauge needle rising into red zone / high temp alert",
+          "Puddle of sweet-smelling green, pink, or orange coolant beneath the vehicle",
+          "Steam or sweet white mist rising from engine bay / front grill",
+          "Internal sludge preventing coolant circulation"
+        ],
+        "checks": [
+          "Inspect radiator core for bent fins, bug accumulation, or road debris",
+          "Check radiator plastic tank seams and hose clamped joints for crusty leaks",
+          "Verify radiator cap spring pressure seal and overflow tank coolant level"
+        ]
+      },
+      "safety_guidance": "NEVER open a radiator cap or expansion tank while the engine is hot. Pressurized scalding boiling coolant can erupt and cause severe third-degree burns."
+    },
+    "headlights": {
+      "id": "headlights",
+      "name": "Headlight Assembly",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/headlights.jpg",
+      "category": "Lighting & Visibility",
+      "keywords": [
+        "headlight", "headlights", "headlamp", "led headlight", "halogen", "fog light", 
+        "headlight bulb", "cloudy lens", "ஹெட்லைட்", "முகப்பு விளக்கு"
+      ],
+      "specifications": {
+        "Bulb Technologies": "Halogen (H4, H7) / HID Xenon / Modern Multi-Projector LED",
+        "Lens Material": "UV-coated optical grade Polycarbonate",
+        "Electrical Rating": "12V, 35W - 60W (Halogen) / 15W - 35W (LED)"
+      },
+      "price_estimate": {
+        "inr": "₹450 - ₹12,000",
+        "usd": "$8 - $160",
+        "note": "Replacement bulb: ₹150 - ₹800; Full headlight assembly: ₹1,200 - ₹12,000"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "One or both low/high beams failing to illuminate",
+          "Yellow, cloudy, or hazy outer lens diffusing light beam",
+          "Internal moisture droplets and condensation after rain or washing",
+          "Flickering lights indicating loose relay, ground connection, or stator issue"
+        ],
+        "checks": [
+          "Inspect bulb filament or LED ballast connector for corrosion",
+          "Check headlight beam alignment against a flat vertical wall at 25 feet",
+          "Check housing rear rubber dust boots for tears letting in moisture"
+        ]
+      },
+      "safety_guidance": "Never touch the glass portion of a halogen bulb with bare fingers; skin oils create localized hot spots that cause the quartz glass to shatter prematurely."
+    },
+    "rim": {
+      "id": "rim",
+      "name": "Wheel Rim",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/rim.jpg",
+      "category": "Chassis & Running Gear",
+      "keywords": [
+        "rim", "wheel rim", "alloy wheel", "spoke wheel", "wheel bend", 
+        "air leak rim", "wobble wheel", "வீல் ரிம்", "அலாய் வீல்"
+      ],
+      "specifications": {
+        "Material": "Cast / Forged Aluminum Alloy or Steel Spoke",
+        "Diameters": "10\" - 19\" (Motorcycles / Scooters), 14\" - 21\" (Passenger Cars)",
+        "Bead Seat": "Tubeless safety hump profile (J-type rim)"
+      },
+      "price_estimate": {
+        "inr": "₹1,800 - ₹11,000",
+        "usd": "$25 - $145",
+        "note": "Bike alloy rim: ₹2,200 - ₹4,800; Car alloy wheel single: ₹3,500 - ₹12,000"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Steering wheel or handlebar vibrations at speeds above 60 km/h",
+          "Slow tubeless tire pressure drop over 2-3 days without puncture",
+          "Visible dent, flat spot, or crack on rim outer flange after pothole impact",
+          "Uneven tire tread cupping"
+        ],
+        "checks": [
+          "Place wheel on a balancing rig to measure dynamic runout and imbalance",
+          "Apply soapy water around rim bead seating edge to spot microscopic air leaks",
+          "Inspect inner rim barrel for hairline stress cracks"
+        ]
+      },
+      "safety_guidance": "Never weld or heat-repair cracked structural cast alloy wheels; metallurgical weakening can lead to catastrophic wheel collapse at highway speeds."
+    },
+    "oil_filter": {
+      "id": "oil_filter",
+      "name": "Engine Oil Filter",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/oil_filter.jpg",
+      "category": "Lubrication System",
+      "keywords": [
+        "oil filter", "oilfilter", "engine filter", "filter change", "oil service", 
+        "oil pressure", "ஆயில் ஃபில்டர்", "எண்ணெய் வடிகட்டி"
+      ],
+      "specifications": {
+        "Filtration Media": "Pleated synthetic micro-glass or resin-impregnated cellulose",
+        "Internal Valve": "Anti-drainback silicone valve + pressure bypass relief valve",
+        "Micron Rating": "10 to 25 microns nominal"
+      },
+      "price_estimate": {
+        "inr": "₹90 - ₹750",
+        "usd": "$2 - $10",
+        "note": "Bike oil filter: ₹90 - ₹350; Car spin-on filter: ₹250 - ₹850"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Low engine oil pressure warning indicator staying on after startup",
+          "Dark, gritty engine oil circulating prematurely",
+          "Oil seepage around the filter sealing ring gasket",
+          "Engine ticking / valvetrain clatter due to restricted oil flow"
+        ],
+        "checks": [
+          "Always replace oil filter with every scheduled engine oil drain",
+          "Check old filter base to ensure old rubber O-ring came off with it (avoid double gasket)",
+          "Inspect cut-open filter pleats for glittering metallic shavings"
+        ]
+      },
+      "safety_guidance": "Always lubricate the new filter rubber O-ring with a film of fresh motor oil before installing. Hand-tighten firmly plus 3/4 turn—never overtorque with a wrench."
+    },
+    "starter": {
+      "id": "starter",
+      "name": "Starter Motor",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/starter.jpg",
+      "category": "Starting System",
+      "keywords": [
+        "starter", "starter motor", "self start", "starter relay", "solenoid", 
+        "starter click", "cranking failure", "ஸ்டார்ட்டர் மோட்டார்"
+      ],
+      "specifications": {
+        "Motor Type": "Permanent Magnet DC Motor with Gear Reduction",
+        "Current Draw": "30A - 70A (Bikes), 100A - 250A (Cars)",
+        "Engagement": "Electromagnetic solenoid shifting Bendix drive gear into flywheel"
+      },
+      "price_estimate": {
+        "inr": "₹1,200 - ₹6,500",
+        "usd": "$18 - $85",
+        "note": "Bike starter motor: ₹1,200 - ₹2,800; Car starter motor: ₹3,200 - ₹7,500"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Single loud 'click' sound from relay without the engine turning over",
+          "Whirring electric spin noise without engine cranking (bendix not engaging)",
+          "Slow, sluggish crank even when battery voltage is verified healthy",
+          "Burning electrical smell near starter after prolonged starting attempts"
+        ],
+        "checks": [
+          "Measure voltage at starter heavy 12V terminal while key is in crank position",
+          "Inspect starter relay contacts and engine grounding strap for voltage drop",
+          "Inspect carbon brush wear and armature commutator bars for burn marks"
+        ]
+      },
+      "safety_guidance": "Never hold the starter button down for more than 5 to 7 seconds continuously. Allow 30 seconds between cranking attempts to prevent stator winding burnout."
+    },
+    "piston": {
+      "id": "piston",
+      "name": "Engine Piston & Rings",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/piston.jpg",
+      "category": "Engine Internals",
+      "keywords": [
+        "piston", "piston rings", "piston skirt", "compression loss", "engine bore", 
+        "white smoke", "blue smoke", "பிஸ்டன்", "இயந்திர பிஸ்டன்"
+      ],
+      "specifications": {
+        "Material": "Cast or Forged Hypereutectic Aluminum Alloy",
+        "Ring Pack": "Top compression ring, second scraper ring, three-piece oil control ring",
+        "Clearance": "0.025 mm - 0.050 mm skirt-to-cylinder bore clearance"
+      },
+      "price_estimate": {
+        "inr": "₹900 - ₹7,500",
+        "usd": "$15 - $95",
+        "note": "Bike piston kit: ₹900 - ₹2,500; Car piston set: ₹3,500 - ₹9,500 (excl. labor)"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Blue-grey exhaust smoke under acceleration (oil burning past rings)",
+          "Excessive blow-by gases puffing from oil filler cap / crankcase breather",
+          "Severe loss of engine power, hill-climbing torque, and compression",
+          "Loud metallic piston slap noise from cylinder when engine is cold"
+        ],
+        "checks": [
+          "Perform a dry and wet cylinder compression test (healthy is 130 - 180 PSI)",
+          "Perform a cylinder leak-down test to verify ring vs valve seal leakage",
+          "Inspect cylinder bore walls for vertical scoring marks and wear ridge"
+        ]
+      },
+      "safety_guidance": "Engine internal tear-down requires precision mechanical tools and specific torque sequences. Always use engine assembly lube when fitting new rings."
+    },
+    "cylinder_head": {
+      "id": "cylinder_head",
+      "name": "Cylinder Head & Valves",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/cylinder_head.jpg",
+      "category": "Engine Top End",
+      "keywords": [
+        "cylinder head", "head gasket", "valves", "blown head gasket", "tappet", 
+        "camshaft", "valve clearance", "சிலிண்டர் ஹெட்"
+      ],
+      "specifications": {
+        "Valvetrain": "SOHC / DOHC with 2, 4, or 5 valves per cylinder",
+        "Sealing": "Multi-Layer Steel (MLS) cylinder head gasket",
+        "Material": "Heat-treated Aluminum Alloy with hardened valve seat inserts"
+      },
+      "price_estimate": {
+        "inr": "₹2,500 - ₹22,000",
+        "usd": "$35 - $280",
+        "note": "Head gasket replacement: ₹1,500 - ₹6,000; Complete cylinder head: ₹5,000 - ₹25,000"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Milky frothy brown sludge on engine oil cap or dipstick (coolant mixing with oil)",
+          "Persistent sweet white smoke billowing from exhaust tailpipe",
+          "Bubbling / frothing in coolant expansion reservoir due to combustion gas leak",
+          "Ticking or tapping valvetrain noise from loose valve tappet clearance"
+        ],
+        "checks": [
+          "Perform cooling system combustion gas chemical leak test (block test)",
+          "Measure valve lash / clearance using feeler gauges to manufacturer specs",
+          "Check mating deck surface flatness with precision straight edge and feeler gauge (< 0.05mm)"
+        ]
+      },
+      "safety_guidance": "Never reuse old cylinder head stretch bolts (Torque-to-Yield / TTY). Always replace head bolts and torque them using a calibrated torque wrench and angle gauge."
+    },
+    "clutch_plate": {
+      "id": "clutch_plate",
+      "name": "Clutch Friction Plate Assembly",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/clutch_plate.jpg",
+      "category": "Drivetrain & Transmission",
+      "keywords": [
+        "clutch", "clutch plate", "clutch friction plate", "clutch slip", "clutch cable", 
+        "pressure plate", "clutch shudder", "கிளட்ச் பிளேட்"
+      ],
+      "specifications": {
+        "Types": "Multi-plate wet clutch (Motorcycles) / Single dry diaphragm clutch (Cars)",
+        "Friction Lining": "Organic composite, Kevlar, or sintered bronze",
+        "Springs": "Coil compression springs or diaphragm spring"
+      },
+      "price_estimate": {
+        "inr": "₹650 - ₹7,500",
+        "usd": "$10 - $95",
+        "note": "Bike clutch plate set: ₹650 - ₹1,800; Car clutch kit: ₹2,800 - ₹8,500"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Clutch slippage: Engine revs jump when opening throttle, but vehicle speed does not increase",
+          "Hard, crunchy gear shifts or inability to find neutral at standstill",
+          "Burning acrid smell coming from gearbox under load or stop-and-go traffic",
+          "Vehicle shudders / vibrates violently when releasing clutch pedal from standstill"
+        ],
+        "checks": [
+          "Check clutch cable free play at handlebar lever (should have 10-15 mm slack)",
+          "Inspect friction plate cork thickness and check steel plates for blue heat warpage",
+          "Verify motorcycle engine oil is certified JASO MA/MA2 (standard car oils cause clutch slip)"
+        ]
+      },
+      "safety_guidance": "In wet clutch bikes, NEVER use automotive motor oils labeled 'Energy Conserving' or containing moly friction modifiers, as they will instantly ruin clutch plates."
+    },
+    "alternator": {
+      "id": "alternator",
+      "name": "Alternator / Stator Magneto",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/alternator.jpg",
+      "category": "Electrical & Charging",
+      "keywords": [
+        "alternator", "stator", "magneto", "stator coil", "rectifier", "charging system", 
+        "alternator belt", "battery not charging", "ஆல்டர்னேட்டர்", "ஸ்டேட்டர்"
+      ],
+      "specifications": {
+        "Output Voltage": "13.8V - 14.5V DC regulated",
+        "Output Current": "10A - 25A (Bikes), 60A - 150A (Cars)",
+        "Components": "Stator field coils, rotor, diode bridge rectifier, IC voltage regulator"
+      },
+      "price_estimate": {
+        "inr": "₹1,200 - ₹8,500",
+        "usd": "$18 - $110",
+        "note": "Bike stator coil: ₹1,200 - ₹2,800; Car alternator: ₹3,800 - ₹9,500"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Red battery symbol light stays lit on dashboard while driving",
+          "Headlights grow dim at idle and brighten when engine is revved",
+          "New battery goes dead within 2-3 days of regular driving",
+          "High-pitched whining or bearing squeal from front accessory belt"
+        ],
+        "checks": [
+          "Measure voltage across battery terminals while engine idles at 2,000 RPM (should be 13.8V - 14.4V)",
+          "Inspect alternator drive serpentine belt for cracks, glazing, or loose tension",
+          "Check stator coil resistance across all three yellow phase wires (0.2 - 1.0 ohm)"
+        ]
+      },
+      "safety_guidance": "Never disconnect the battery cables while the engine is running to test the alternator; the resulting high-voltage surge will instantly fry delicate ECU chips."
+    },
+    "transmission": {
+      "id": "transmission",
+      "name": "Transmission Gearbox",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/transmission.jpg",
+      "category": "Drivetrain",
+      "keywords": [
+        "transmission", "gearbox", "gears", "gear shift", "gear slip", "grinding gear", 
+        "transmission fluid", "synchromesh", "கியர்பாக்ஸ்", "டிரான்ஸ்மிஷன்"
+      ],
+      "specifications": {
+        "Types": "Sequential Constant Mesh (Bikes), Manual / AT / CVT / DCT (Cars)",
+        "Lubrication": "75W-90 / 80W-90 Gear Oil or dedicated ATF / DCTF",
+        "Shift Mechanism": "Shift drum & selector forks (Bikes) / Shift cables & synchro rings (Cars)"
+      },
+      "price_estimate": {
+        "inr": "₹3,500 - ₹35,000",
+        "usd": "$50 - $450",
+        "note": "Gearbox overhaul / synchro replacement: ₹3,500 - ₹15,000"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Grinding noise when engaging second or third gear (worn synchronizer ring)",
+          "Gear popping out into neutral unexpectedly during acceleration",
+          "Persistent whining or roaring bearing noise that changes with road speed",
+          "Stiff, stubborn gear selector lever that resists entering gear"
+        ],
+        "checks": [
+          "Check transmission gear oil level and color; inspect magnetic drain plug for metal shards",
+          "Inspect gear shift linkage cables and rubber bushings for excessive slack",
+          "Ensure clutch completely disengages when lever/pedal is fully depressed"
+        ]
+      },
+      "safety_guidance": "Never attempt to shift into reverse while vehicle is rolling forward. Always ensure vehicle is fully stationary to avoid snapping transmission reverse idler teeth."
+    },
+    "fuel_injector": {
+      "id": "fuel_injector",
+      "name": "Electronic Fuel Injector",
+      "type": "component",
+      "vehicle_type": "both",
+      "image_url": "/static/images/components/fuel_injector.jpg",
+      "category": "Fuel System",
+      "keywords": [
+        "fuel injector", "injector", "fuel injection", "efi", "injector clogged", 
+        "spray pattern", "lean code", "ஃப்யூயல் இன்ஜெக்டர்"
+      ],
+      "specifications": {
+        "Actuation": "Electromagnetic Solenoid / Piezoelectric crystal",
+        "Operating Fuel Pressure": "2.5 - 4.5 bar (Port Injection), 100 - 350 bar (Direct Injection)",
+        "Spray Holes": "4 to 12 micro-machined orifices"
+      },
+      "price_estimate": {
+        "inr": "₹850 - ₹5,500",
+        "usd": "$12 - $70",
+        "note": "Bike injector: ₹850 - ₹2,200; Car direct injector: ₹2,200 - ₹6,500 each"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Engine hesitation or stumbling on gentle throttle opening",
+          "Intermittent engine cylinder misfire with Check Engine code (P0300, P0301)",
+          "Strong smell of unburnt fuel and dark exhaust smoke if injector is leaking open",
+          "Poor fuel economy and rough idle shake"
+        ],
+        "checks": [
+          "Listen to injector clicking rhythm using a mechanic's stethoscope (fast rhythmic click)",
+          "Measure injector solenoid coil electrical resistance with a multimeter (11 - 16 ohms)",
+          "Inspect spray pattern for fine atomized cone mist vs dripping streaming droplets"
+        ]
+      },
+      "safety_guidance": "Direct injection fuel rails operate under extreme pressure (up to 300+ bar). Relieve fuel system pressure properly before loosening high-pressure fuel lines."
+    }
+  },
+  "vehicles": {
+    "bmw_m4_gt3": {
+      "id": "bmw_m4_gt3",
+      "name": "BMW M4 GT3 EVO",
+      "type": "vehicle",
+      "vehicle_type": "car",
+      "image_url": "/static/images/vehicles/bmw_m4_gt3.jpg",
+      "category": "GT3 Homologated Motorsport Race Car",
+      "manufacturer": "BMW M Motorsport",
+      "keywords": [
+        "bmw", "bmw m4", "bmw m4 gt3", "m4 gt3", "bmw m4 gt3 evo", "gt3 evo", 
+        "bmw motorsport", "bmw racing", "பிஎம்டபிள்யூ"
+      ],
+      "specifications": {
+        "Engine": "3.0-liter P58 TwinPower Turbo Inline-6",
+        "Power Output": "Up to 590 hp (FIA BoP dependent)",
+        "Torque": "Approx. 700 Nm",
+        "Transmission": "Xtrac 6-Speed Sequential Racing Gearbox with Paddle Shift",
+        "Chassis Weight": "Approx. 1,265 kg (Base homologation dry weight)",
+        "Drivetrain": "Rear-Wheel Drive (RWD) with mechanical limited-slip differential",
+        "Brakes": "6-piston front motorsport calipers with carbon cooling ducts"
+      },
+      "price_estimate": {
+        "inr": "₹5,20,00,000 (Approx. Base)",
+        "usd": "$570,000 (Base Customer Racing)",
+        "note": "FIA GT3 Customer Racing Spec Car (Track only, non-street legal)"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Telemetry brake temperature spike above 750°C",
+          "Sequential gear shift lag due to low hydraulic shift pressure",
+          "Aero downforce loss caused by front splitter or rear wing endplate damage"
+        ],
+        "checks": [
+          "Pre-session tire pressure cold telemetry calibration (target 1.9 - 2.1 bar hot)",
+          "Inspect carbon fiber brake disc thickness and pad wear limits",
+          "Torque center-lock wheel nuts to 650 Nm specification"
+        ]
+      },
+      "safety_guidance": "Pure track competition vehicle equipped with FIA-certified roll cage, 6-point harness, and integrated onboard fire suppression system. Not legal for public road use."
+    },
+    "yamaha_r15": {
+      "id": "yamaha_r15",
+      "name": "Yamaha YZF-R15 V4",
+      "type": "vehicle",
+      "vehicle_type": "bike",
+      "image_url": "/static/images/vehicles/yamaha_r15.jpg",
+      "category": "Supersport Motorcycle",
+      "manufacturer": "Yamaha Motor Company",
+      "keywords": [
+        "yamaha", "r15", "yamaha r15", "yzf r15", "r15 v4", "r15m", "yamaha bike", "யமஹா ஆர்15"
+      ],
+      "specifications": {
+        "Engine": "155cc Liquid-cooled 4-stroke SOHC 4-valve with VVA",
+        "Max Power": "18.4 PS @ 10,000 RPM",
+        "Max Torque": "14.2 Nm @ 7,500 RPM",
+        "Transmission": "6-Speed Manual with Assist & Slipper Clutch and Quick Shifter",
+        "Front Suspension": "37mm Upside Down (USD) Telescopic Fork",
+        "Brakes": "Dual-channel ABS with 282mm front disc and 220mm rear disc",
+        "Fuel Economy": "40 - 48 km/l (Typical road conditions)"
+      },
+      "price_estimate": {
+        "inr": "₹1,82,000 - ₹1,98,000 (Ex-showroom)",
+        "usd": "$2,200 - $2,400",
+        "note": "Standard V4 to R15M Metallic Grey variant"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "VVA (Variable Valve Actuation) not kicking in above 7,400 RPM",
+          "Clutch cable stiffness causing quick-shifter cut hesitation",
+          "Coolant level dropping slowly without external puddle"
+        ],
+        "checks": [
+          "Check engine oil level using dipstick every 1,500 km (Yamalube 10W-40 recommended)",
+          "Inspect drive chain slack (25 - 35 mm) and lubricate every 500 km",
+          "Check USD fork seals for oily dust accumulation indicating seal leakage"
+        ]
+      },
+      "safety_guidance": "High-revving supersport geometry requires strict observance of tire cold pressures (28 PSI front, 33 PSI rear). Always wear full face ECE/DOT helmet and riding gloves."
+    },
+    "royal_enfield_classic_350": {
+      "id": "royal_enfield_classic_350",
+      "name": "Royal Enfield Classic 350",
+      "type": "vehicle",
+      "vehicle_type": "bike",
+      "image_url": "/static/images/vehicles/royal_enfield_classic_350.jpg",
+      "category": "Modern Retro Cruiser Motorcycle",
+      "manufacturer": "Royal Enfield",
+      "keywords": [
+        "royal enfield", "classic 350", "bullet", "enfield", "re classic", "bullet 350", "ராயல் என்பீல்ட்"
+      ],
+      "specifications": {
+        "Engine": "349cc Air-Oil Cooled J-Series Single Cylinder 4-stroke",
+        "Max Power": "20.2 BHP @ 6,100 RPM",
+        "Max Torque": "27 Nm @ 4,000 RPM",
+        "Transmission": "5-Speed Constant Mesh Gearbox",
+        "Chassis": "Twin Downtube Spine Frame",
+        "Fuel Tank Capacity": "13 Liters",
+        "Kerb Weight": "195 kg"
+      },
+      "price_estimate": {
+        "inr": "₹1,93,000 - ₹2,30,000 (Ex-showroom)",
+        "usd": "$2,350 - $2,800",
+        "note": "Redditch / Halcyon to Chrome Series variants"
+      },
+      "diagnostic_info": {
+        "symptoms": [
+          "Handlebar wobble at 40-50 km/h due to wheel spoke tension slack or tire cupping",
+          "Tappet ticking sound from J-engine top end when fully warmed up",
+          "False neutral between 1st and 2nd gear shifts"
+        ],
+        "checks": [
+          "Check engine oil sight glass (Royal Enfield Semi-Synthetic 15W-50)",
+          "Inspect spoke wheel tightness by tapping spokes with small wrench (look for dull thud)",
+          "Check rear brake disc free play to prevent pad dragging on cruiser hub"
+        ]
+      },
+      "safety_guidance": "Substantial kerb weight of 195kg requires solid footing when parking on uneven slopes. Always park with side stand firmly locked in gear."
+    }
+  }
+}

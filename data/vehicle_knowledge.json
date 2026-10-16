@@ -1,0 +1,295 @@
+{
+  "battery": {
+    "name": "Vehicle Battery",
+    "category": "Electrical System",
+    "vehicles": ["bike", "car"],
+    "function": "Supplies electrical energy to start the engine and power electronic accessories when the engine is off.",
+    "working": "Chemical reactions between lead plates and sulfuric acid electrolyte produce direct current (DC) electricity, typically at 12 volts.",
+    "common_problems": [
+      "Dead cell or sulfation resulting in failure to hold charge",
+      "Terminal corrosion causing high resistance and starting failure",
+      "Alternator or stator charging system failure draining the battery",
+      "Parasitic draw draining battery overnight"
+    ],
+    "maintenance": [
+      "Clean terminal posts with wire brush and baking soda solution",
+      "Check resting terminal voltage (healthy is 12.6V or above)",
+      "Ensure electrolyte level is adequate in flooded lead-acid batteries",
+      "Verify charging voltage while engine runs (13.8V to 14.4V)"
+    ]
+  },
+  "spark_plug": {
+    "name": "Spark Plug",
+    "category": "Ignition System",
+    "vehicles": ["bike", "car"],
+    "function": "Delivers an electric spark to ignite the compressed air-fuel mixture in the cylinder combustion chamber.",
+    "working": "High-voltage electricity from the ignition coil arcs across the center and ground electrode gap at precisely timed intervals.",
+    "common_problems": [
+      "Carbon fouling from rich fuel mixture or incomplete combustion",
+      "Electrode gap erosion causing misfires and weak spark",
+      "Oil contamination from leaking valve stem seals or piston rings",
+      "Engine hesitation, rough idling, and poor fuel economy"
+    ],
+    "maintenance": [
+      "Inspect electrode color (light tan/gray indicates healthy combustion)",
+      "Measure and set spark plug gap with a feeler gauge to manufacturer spec",
+      "Torque to proper specification to avoid cylinder head thread damage",
+      "Replace every 15,000 to 30,000 km for standard copper or 80,000 km for iridium"
+    ]
+  },
+  "brake_rotor": {
+    "name": "Brake Rotor (Disc)",
+    "category": "Braking System",
+    "vehicles": ["bike", "car"],
+    "function": "Provides a flat, rotating friction surface that brake pads clamp onto to decelerate or stop the vehicle.",
+    "working": "The hydraulic brake caliper squeezes brake pads against both faces of the spinning rotor, converting kinetic energy into heat.",
+    "common_problems": [
+      "Rotor warping caused by excessive thermal stress, leading to pulsating brake pedal or lever",
+      "Deep grooves and scoring from worn-out brake pad backplates",
+      "Excessive thinning below minimum manufacturer stamp thickness",
+      "Surface rust or glaze reducing friction coefficient"
+    ],
+    "maintenance": [
+      "Measure disc thickness with a micrometer or vernier caliper",
+      "Inspect rotor face visually for heat discoloration, deep cracks, and grooves",
+      "Clean brake dust using designated brake cleaner spray",
+      "Never spray lubricants or degreasers near rotor surface"
+    ]
+  },
+  "brake_pad": {
+    "name": "Brake Pads",
+    "category": "Braking System",
+    "vehicles": ["bike", "car"],
+    "function": "High-friction material that contacts the brake rotor to generate braking torque.",
+    "working": "Pushed directly by hydraulic caliper pistons when brake lever or pedal is pressed.",
+    "common_problems": [
+      "Excessive friction material wear down to metal backing plate",
+      "Squealing noise caused by acoustic wear indicators contacting the disc",
+      "Uneven pad wear due to seized caliper slide pins",
+      "Glazing from prolonged high-temperature riding or driving"
+    ],
+    "maintenance": [
+      "Inspect pad thickness regularly (replace if lining is below 2-3 mm)",
+      "Ensure caliper slide pins are cleaned and lubricated with silicone grease",
+      "Bed in new brake pads properly with gradual braking cycles"
+    ]
+  },
+  "brake_caliper": {
+    "name": "Brake Caliper",
+    "category": "Braking System",
+    "vehicles": ["bike", "car"],
+    "function": "Houses the brake pistons and holds the brake pads in proper alignment over the rotor.",
+    "working": "Hydraulic brake fluid pressure pushes the internal piston(s) outward to clamp the pads onto the rotor.",
+    "common_problems": [
+      "Piston seizure due to moisture, corrosion, or old brake fluid",
+      "Fluid leaks past rubber piston dust seals",
+      "Stuck slider pins causing dragging brakes and overheating",
+      "Spongy brake lever/pedal from air bubbles trapped in caliper lines"
+    ],
+    "maintenance": [
+      "Flush and bleed brake fluid every 1 to 2 years (DOT 4 or DOT 5.1)",
+      "Inspect rubber boots and seals for splits or fluid leakage",
+      "Clean caliper assembly of brake dust and road grime"
+    ]
+  },
+  "radiator": {
+    "name": "Radiator",
+    "category": "Cooling System",
+    "vehicles": ["bike", "car"],
+    "function": "Dissipates excess engine heat by transferring heat from engine coolant to the ambient air stream.",
+    "working": "Hot coolant flows through narrow aluminum tubes with thin cooling fins while air passes through, cooling the liquid.",
+    "common_problems": [
+      "Coolant leaks from cracked plastic tanks or corroded tube seams",
+      "Bent or obstructed cooling fins blocking airflow",
+      "Internal sludge or scale clogging coolant circulation",
+      "Overheating engine and boiling coolant overflow"
+    ],
+    "maintenance": [
+      "Straighten bent radiator cooling fins with a fin comb",
+      "Flush and refill cooling system with 50/50 ethylene glycol coolant mix",
+      "Inspect radiator cap pressure seal for rubber degradation",
+      "Rinse away bugs, dirt, and mud using low-pressure water spray"
+    ]
+  },
+  "headlights": {
+    "name": "Headlight Assembly",
+    "category": "Lighting & Visibility",
+    "vehicles": ["bike", "car"],
+    "function": "Illuminates the roadway ahead for nighttime operation and enhances vehicle visibility to other motorists.",
+    "working": "Uses halogen filament, HID xenon arc, or LED diodes focused through a parabolic reflector and polycarbonate lens.",
+    "common_problems": [
+      "Burnt-out halogen bulb filaments or failed LED driver ballast",
+      "Cloudy, yellowed, or oxidized polycarbonate lens blocking light output",
+      "Moisture condensation inside sealed housing from degraded gasket",
+      "Misfocused or misaligned beam angle blinding oncoming traffic"
+    ],
+    "maintenance": [
+      "Restore oxidized lenses with headlight polishing and UV sealant",
+      "Check beam vertical and horizontal alignment on a flat wall at 25 feet",
+      "Never touch halogen bulb glass with bare fingers (oils cause early failure)",
+      "Inspect wiring harness connectors for melting or loose ground pins"
+    ]
+  },
+  "rim": {
+    "name": "Wheel Rim",
+    "category": "Chassis & Running Gear",
+    "vehicles": ["bike", "car"],
+    "function": "Supports the tire bead, carries vehicle load, and transmits drive and braking forces.",
+    "working": "Bolts directly to wheel hub; maintains airtight seal with tubeless tire bead.",
+    "common_problems": [
+      "Bent or cracked rim lip from striking severe potholes or curbs",
+      "Slow bead air leak due to corrosion or rim edge deformation",
+      "Wheel unbalance causing high-speed steering wobble",
+      "Stress fractures around lug nut holes or spokes"
+    ],
+    "maintenance": [
+      "Perform periodic dynamic wheel balancing and tire rotation",
+      "Torque wheel lug nuts or axle nuts with a calibrated torque wrench",
+      "Inspect inner and outer rim lips for dents, cracks, or paint peeling"
+    ]
+  },
+  "oil_filter": {
+    "name": "Engine Oil Filter",
+    "category": "Lubrication System",
+    "vehicles": ["bike", "car"],
+    "function": "Traps abrasive metal particulates, carbon soot, and debris from engine oil before recirculation.",
+    "working": "Pressurized oil is forced through porous synthetic or cellulose pleats inside a steel canister or cartridge.",
+    "common_problems": [
+      "Clogged filter media opening the internal bypass valve (allowing dirty oil)",
+      "Rubber O-ring gasket leak causing low oil pressure and oil loss",
+      "Over-tightened canister crushing the gasket or stripping threads",
+      "Collapsed filter element from excessive oil viscosity or cold starts"
+    ],
+    "maintenance": [
+      "Replace oil filter at every scheduled engine oil change",
+      "Lubricate the rubber O-ring gasket with clean motor oil before spinning on",
+      "Hand-tighten plus 3/4 turn (avoid over-torquing with filter wrench)"
+    ]
+  },
+  "starter": {
+    "name": "Starter Motor",
+    "category": "Starting System",
+    "vehicles": ["bike", "car"],
+    "function": "Spins the engine flywheel or crankshaft to initiate internal combustion.",
+    "working": "An integrated electromagnetic solenoid pushes a bendix pinion gear into mesh with the flywheel ring gear while switching high current to the DC motor.",
+    "common_problems": [
+      "Worn starter carbon brushes causing intermittent or no-crank condition",
+      "Solenoid click without motor spinning due to burnt internal contacts",
+      "Worn bendix gear teeth grinding against the flywheel ring gear",
+      "Slow cranking under load due to weak starter or corroded battery cable"
+    ],
+    "maintenance": [
+      "Verify battery health and clean main ground and positive terminal cables",
+      "Listen for single click (solenoid good, motor/battery weak) vs rapid clicking",
+      "Avoid cranking continuously for more than 10 seconds to prevent overheating"
+    ]
+  },
+  "piston": {
+    "name": "Engine Piston",
+    "category": "Engine Internals",
+    "vehicles": ["bike", "car"],
+    "function": "Transfers force from combustion gas expansion to the crankshaft via the connecting rod.",
+    "working": "Moves reciprocally inside cylinder bore, compressing fuel mixture and receiving combustion force.",
+    "common_problems": [
+      "Piston ring wear causing blow-by gas, high crankcase pressure, and blue exhaust smoke",
+      "Piston skirt scuffing from oil starvation or engine overheating",
+      "Piston crown detonation damage from low-octane fuel or improper ignition timing",
+      "Low cylinder compression resulting in hard starting and loss of power"
+    ],
+    "maintenance": [
+      "Use specified engine oil grade and change at scheduled intervals",
+      "Prevent engine overheating by maintaining radiator/cooling fins",
+      "Perform periodic cylinder compression test (benchmark 120-170 PSI)"
+    ]
+  },
+  "cylinder_head": {
+    "name": "Cylinder Head",
+    "category": "Engine Top End",
+    "vehicles": ["bike", "car"],
+    "function": "Houses intake/exhaust valves, spark plugs, and camshaft(s), sealing the top of combustion chambers.",
+    "working": "Fastened tightly to engine block with head bolts, sealing combustion pressures and coolant/oil passages through a multi-layer steel head gasket.",
+    "common_problems": [
+      "Blown cylinder head gasket allowing coolant into combustion chamber or oil sump",
+      "Warped mating surface from severe engine overheating",
+      "Hairline cracks between valve seats causing combustion leaks",
+      "Worn valve guides or stem seals causing oil burning"
+    ],
+    "maintenance": [
+      "Never continue running an overheated engine",
+      "Verify head bolt torque sequence and values when servicing",
+      "Check for milky oil on oil cap (sign of coolant mixing into oil)"
+    ]
+  },
+  "clutch_plate": {
+    "name": "Clutch Friction Plate / Assembly",
+    "category": "Drivetrain & Transmission",
+    "vehicles": ["bike", "car"],
+    "function": "Connects and disconnects engine power from transmission gearbox for shifting and starting.",
+    "working": "Friction material plates pressed against steel pressure plates transmit torque via spring pressure until disengaged by clutch lever or pedal.",
+    "common_problems": [
+      "Clutch slippage under acceleration (engine revs rise without speed increase)",
+      "Burnt friction lining from riding the clutch or aggressive starts",
+      "Clutch dragging or hard gear shifts due to improper cable free-play",
+      "Warped steel plates causing clutch judder or shuddering when taking off"
+    ],
+    "maintenance": [
+      "Maintain proper clutch cable free play (10-15 mm at lever tip for bikes)",
+      "In wet clutch motorcycles, strictly use JASO MA/MA2 motorcycle oils (no friction modifiers)",
+      "Avoid riding or holding the clutch at red lights"
+    ]
+  },
+  "alternator": {
+    "name": "Alternator / Stator Magneto",
+    "category": "Electrical & Charging",
+    "vehicles": ["bike", "car"],
+    "function": "Generates alternating current (AC) electricity while the engine runs to power systems and recharge the battery.",
+    "working": "Rotor electromagnet spins inside stationary stator coils; internal diodes rectify AC to DC voltage controlled by an internal regulator.",
+    "common_problems": [
+      "Worn rotor brushes or failed voltage regulator overcharging or undercharging",
+      "Blown rectifier diode allowing battery discharge or AC ripple noise",
+      "Noisy or seized alternator pulley bearings causing belt squeal",
+      "Battery warning light illuminating on dashboard instrument cluster"
+    ],
+    "maintenance": [
+      "Check charging voltage across battery terminals while running (13.8V - 14.4V)",
+      "Inspect serpentine or drive belt tension and rib condition",
+      "Ensure alternator cooling vents are clear of grease and oil leaks"
+    ]
+  },
+  "transmission": {
+    "name": "Transmission Gearbox",
+    "category": "Drivetrain",
+    "vehicles": ["bike", "car"],
+    "function": "Alters gear ratios between engine crankshaft and drive wheels to optimize torque and speed.",
+    "working": "Pairs input shaft gears with output shaft countershaft gears, shifted via selector forks and dog clutches or synchromesh sleeves.",
+    "common_problems": [
+      "Grinding noise during gear engagement due to worn synchronizer rings",
+      "Gears popping out of mesh under acceleration due to worn dogs or detents",
+      "Whining bearing noise originating from transmission input shaft",
+      "Low gear oil causing extreme friction, gear tooth chipping, and overheating"
+    ],
+    "maintenance": [
+      "Inspect transmission gear oil level and replace at recommended service intervals",
+      "Always fully depress clutch before selecting gears to avoid dog tooth rounding",
+      "Inspect output shaft seal for oil seepage around drive sprocket or CV joint"
+    ]
+  },
+  "fuel_injector": {
+    "name": "Electronic Fuel Injector",
+    "category": "Fuel System",
+    "vehicles": ["bike", "car"],
+    "function": "Sprays finely atomized fuel into the intake port or combustion chamber under precise ECU command.",
+    "working": "An internal solenoid or piezo actuator lifts a micro-pintle valve, allowing high-pressure fuel to atomize through precision micro-orifices.",
+    "common_problems": [
+      "Clogged nozzle orifices from gum and fuel lacquer deposits",
+      "Leaking injector pintle causing flooded cylinders, rich mixture, and black smoke",
+      "Sticking solenoid causing random engine misfires and rough idle",
+      "Degraded rubber O-rings causing external fuel or vacuum leaks"
+    ],
+    "maintenance": [
+      "Use quality fuel with detergents and change fuel filter regularly",
+      "Run professional ultrasonic injector cleaning or fuel system additives",
+      "Replace upper and lower Viton O-rings whenever injectors are removed"
+    ]
+  }
+}

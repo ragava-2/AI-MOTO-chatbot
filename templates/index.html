@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI MOTO – Intelligent AI Vehicle Assistant</title>
+    <meta name="description" content="AI MOTO is an AI-powered multilingual vehicle assistant for bikes and cars, providing maintenance, troubleshooting, component learning, and diagnostics.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Markdown Parser & Typewriter -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3 id="modal-title"><i class="fa-solid fa-user-lock"></i> Welcome to AI MOTO</h3>
+                <button id="close-modal-btn" class="close-btn" aria-label="Close dialog">&times;</button>
+            </div>
+            
+            <!-- Prominent Auth Tabs -->
+            <div class="auth-tabs" role="tablist">
+                <button type="button" id="tab-login" class="auth-tab active" role="tab" aria-selected="true"><i class="fa-solid fa-right-to-bracket"></i> Log In</button>
+                <button type="button" id="tab-register" class="auth-tab" role="tab" aria-selected="false"><i class="fa-solid fa-user-plus"></i> Register (Create ID)</button>
+            </div>
+
+            <form id="auth-form">
+                <div class="input-group">
+                    <label for="auth-username"><i class="fa-solid fa-user"></i> <span id="auth-username-label">Username / Email</span></label>
+                    <input type="text" id="auth-username" placeholder="Enter username or email" required autocomplete="username">
+                </div>
+                <div class="input-group" id="auth-email-group" style="display:none;">
+                    <label for="auth-email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <input type="email" id="auth-email" placeholder="name@example.com" autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <label for="auth-password"><i class="fa-solid fa-lock"></i> Password</label>
+                    <input type="password" id="auth-password" placeholder="Enter password" required autocomplete="current-password">
+                </div>
+                <button type="submit" id="auth-submit-btn" class="primary-btn">Log In</button>
+            </form>
+            <p id="auth-switch-text">New to AI MOTO? <a href="#" id="auth-switch-link">Create an account first</a></p>
+            <p id="auth-error" class="error-msg hidden"></p>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content glass-panel settings-dialog">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-gear"></i> Settings</h3>
+                <button id="close-settings-btn" class="close-btn" aria-label="Close settings">&times;</button>
+            </div>
+            
+            <!-- Appearance -->
+            <div class="settings-section">
+                <h4><i class="fa-solid fa-palette"></i> Appearance</h4>
+                <div class="theme-toggle">
+                    <button id="theme-light" class="pill-btn"><i class="fa-solid fa-sun"></i> Light Mode</button>
+                    <button id="theme-dark" class="pill-btn active"><i class="fa-solid fa-moon"></i> Dark Mode</button>
+                </div>
+            </div>
+
+            <!-- Language -->
+            <div class="settings-section">
+                <h4><i class="fa-solid fa-language"></i> Preferred Language</h4>
+                <div class="lang-toggle-settings">
+                    <button id="settings-lang-en" class="pill-btn active">English</button>
+                    <button id="settings-lang-ta" class="pill-btn">தமிழ் (Tamil)</button>
+                </div>
+            </div>
+
+            <!-- Voice Controls Info -->
+            <div class="settings-section">
+                <h4><i class="fa-solid fa-microphone-lines"></i> Voice & Audio</h4>
+                <p class="settings-desc">Voice input uses speech-to-text. AI responses can be read aloud using the Listen button.</p>
+            </div>
+
+            <!-- Account Details -->
+            <div class="settings-section" id="settings-account-section">
+                <h4><i class="fa-solid fa-id-card"></i> Account</h4>
+                <div id="settings-user-info" class="user-info-card">
+                    <p><strong>Username:</strong> <span id="settings-username-display">Guest</span></p>
+                    <p><strong>Email:</strong> <span id="settings-email-display">-</span></p>
+                    <p><strong>Session:</strong> <span>7-Day Persistent Session</span></p>
+                </div>
+                <button id="settings-logout-btn" class="danger-btn hidden"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Learning Mode Modal / Drawer -->
+    <div id="learning-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content glass-panel learning-dialog">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-book-open-reader"></i> 📚 Learn About My Vehicle</h3>
+                <button id="close-learning-btn" class="close-btn">&times;</button>
+            </div>
+            <p class="learning-subtitle">Select any component or system to learn how it works, common faults, and maintenance tips:</p>
+            
+            <div class="learning-grid" id="learning-topics-grid">
+                <!-- Dynamically populated based on active vehicle (Bike or Car) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content glass-panel delete-dialog">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Delete Conversation</h3>
+                <button id="close-delete-btn" class="close-btn">&times;</button>
+            </div>
+            <p id="delete-modal-text">Are you sure you want to delete this conversation?</p>
+            <div class="modal-actions">
+                <button id="cancel-delete-btn" class="pill-btn">Cancel</button>
+                <button id="confirm-delete-btn" class="danger-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-logo">
+                    <div class="logo-icon"><i class="fa-solid fa-motorcycle"></i></div>
+                    <div class="logo-text">AI MOTO</div>
+                    <span class="logo-badge">VEHICLE AI</span>
+                </div>
+                
+                <ul class="sidebar-menu">
+                    <li>
+                        <button class="menu-item active" id="new-chat-btn">
+                            <i class="fa-solid fa-plus"></i> New Chat
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item" id="open-learning-btn">
+                            <i class="fa-solid fa-book-open"></i> Vehicle Learning Mode
+                        </button>
+                    </li>
+                    <li class="history-section-wrapper" id="history-container">
+                        <div class="history-header">
+                            <span class="history-label"><i class="fa-solid fa-clock-rotate-left"></i> History</span>
+                        </div>
+                        <div class="history-search">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="search-history" placeholder="Search conversations..." aria-label="Search conversations">
+                        </div>
+                        <ul id="history-list" class="history-list">
+                            <!-- Populated with conversation items -->
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="menu-item" id="settings-btn">
+                            <i class="fa-solid fa-gear"></i> Settings
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-bottom">
+                <button class="menu-item login-btn" id="login-btn">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Login / Register
+                </button>
+                <button class="menu-item logout-btn hidden" id="logout-btn">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="chat-container">
+            <!-- Header section -->
+            <header class="top-header">
+                <div class="header-left">
+                    <div class="active-vehicle-badge" id="active-vehicle-badge">
+                        <span id="vehicle-badge-icon">🏍️</span>
+                        <span id="vehicle-badge-text">Bike Mode</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="language-toggle glass-panel">
+                        <span class="lang-icon">🌐</span>
+                        <button id="lang-en" class="lang-btn active">English</button>
+                        <button id="lang-ta" class="lang-btn">தமிழ்</button>
+                    </div>
+                    <div class="profile-dropdown glass-panel" id="user-profile-btn">
+                        <i class="fa-regular fa-user"></i>
+                        <span id="header-username">Guest</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Vehicle Selection Screen (Hero/Start) -->
+            <section class="hero-section" id="home-header">
+                <div class="hero-bg-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-branding">
+                        <h1>AI MOTO</h1>
+                        <h2>Intelligent AI Vehicle Assistant</h2>
+                        <p class="hero-tagline">What vehicle do you need help with today?</p>
+                    </div>
+
+                    <!-- Category Selection -->
+                    <div class="vehicle-selector-grid">
+                        <div class="vehicle-card" id="select-bike-card" tabindex="0" role="button" aria-label="Select Bike Assistant">
+                            <div class="vehicle-card-icon">🏍️</div>
+                            <h3>BIKE</h3>
+                            <p>Motorcycles, Scooters, Commuters, Sports & Superbikes</p>
+                            <span class="select-chip">Select Bike <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+
+                        <div class="vehicle-card" id="select-car-card" tabindex="0" role="button" aria-label="Select Car Assistant">
+                            <div class="vehicle-card-icon">🚗</div>
+                            <h3>CAR</h3>
+                            <p>Hatchbacks, Sedans, SUVs, Hybrids & Electric Cars</p>
+                            <span class="select-chip">Select Car <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="hero-features">
+                        <span><i class="fa-solid fa-wrench"></i> Troubleshooting</span>
+                        <span><i class="fa-solid fa-camera"></i> Image Inspection</span>
+                        <span><i class="fa-solid fa-microphone"></i> Voice Input</span>
+                        <span><i class="fa-solid fa-language"></i> English & தமிழ்</span>
+                        <span><i class="fa-solid fa-volume-high"></i> Voice Audio</span>
+                    </div>
+
+                    <!-- Popular Inquiry Starter Chips -->
+                    <div class="hero-quick-prompts">
+                        <span class="quick-prompts-label"><i class="fa-solid fa-bolt" style="color: var(--accent);"></i> Popular Inquiries:</span>
+                        <div class="quick-chips-wrapper">
+                            <button type="button" class="quick-prompt-btn" data-query="Tell me about BMW M4 GT3 EVO"><i class="fa-solid fa-flag-checkered"></i> BMW M4 GT3 EVO</button>
+                            <button type="button" class="quick-prompt-btn" data-query="What are the parts in a BMW racing car?"><i class="fa-solid fa-gears"></i> Racing Car Parts</button>
+                            <button type="button" class="quick-prompt-btn" data-query="My bike battery is not working"><i class="fa-solid fa-car-battery"></i> Bike Battery Problem</button>
+                            <button type="button" class="quick-prompt-btn" data-query="How does a vehicle clutch plate work?"><i class="fa-solid fa-circle-nodes"></i> Clutch Plate Guide</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Box where conversation messages appear -->
+            <div class="chat-box hidden" id="chat-box" role="log" aria-live="polite"></div>
+
+            <!-- Typing indicator -->
+            <div class="typing-indicator hidden" id="typing-indicator">
+                <div class="message ai-message">
+                    <div class="message-content indicator-text glass-panel">
+                        <span class="indicator-label"><i class="fa-solid fa-microchip fa-spin"></i> AI MOTO is analyzing...</span>
+                        <span class="dot">●</span> <span class="dot">●</span> <span class="dot">●</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <footer class="chat-input-area">
+                <div id="file-name-display" class="file-display hidden">
+                    <span id="file-name-text"></span>
+                    <button type="button" id="remove-file-btn" class="remove-file-btn" aria-label="Remove attached image">&times;</button>
+                </div>
+                
+                <form id="chat-form" class="input-form glass-panel">
+                    <input type="file" id="file-upload" class="hidden" accept="image/jpeg,image/png,image/webp">
+                    
+                    <div class="input-actions-left">
+                        <button type="button" id="attach-img-btn" class="pill-btn attach-btn" title="Upload Bike/Car Image (JPG, PNG, WEBP)">
+                            <i class="fa-solid fa-camera"></i> <span class="btn-text">Image</span>
+                        </button>
+                        <button type="button" id="quick-learn-btn" class="pill-btn learn-pill-btn" title="Open Vehicle Learning Mode">
+                            <i class="fa-solid fa-book-open"></i> <span class="btn-text">Learn</span>
+                        </button>
+                    </div>
+                    
+                    <input type="text" id="user-input" placeholder="Describe your vehicle problem..." autocomplete="off" aria-label="Message to AI MOTO">
+                    
+                    <div class="input-actions-right">
+                        <button type="button" id="voice-btn" class="icon-btn voice-btn" title="Click to speak (English or Tamil)" aria-label="Voice input">
+                            <i class="fa-solid fa-microphone"></i>
+                        </button>
+                        <button type="submit" id="send-btn" class="send-circle-btn" aria-label="Send message">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Quick Suggestions based on active vehicle -->
+                <div class="suggestions-container" id="suggestions">
+                    <span class="suggestions-label"><i class="fa-regular fa-lightbulb"></i> Suggestions:</span>
+                    <div id="suggestions-pills" class="suggestions-pills-wrap">
+                        <!-- Populated dynamically based on Bike vs Car -->
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div id="image-lightbox-modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Component Image Preview">
+        <div class="lightbox-content glass-panel">
+            <button id="close-lightbox-btn" class="close-btn" aria-label="Close image preview">&times;</button>
+            <div class="lightbox-img-wrap">
+                <img id="lightbox-img" src="" alt="Automotive Component Image">
+            </div>
+            <div class="lightbox-caption">
+                <h4 id="lightbox-title">Automotive Component</h4>
+                <span id="lightbox-badge" class="verified-asset-badge"><i class="fa-solid fa-circle-check"></i> Verified Asset</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Logic Script -->
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

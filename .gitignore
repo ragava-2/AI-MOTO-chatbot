@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# SQLite / Application Database & instance data
+instance/
+*.sqlite
+*.sqlite3
+*.db
+
+# Training runs, validation images & logs
+runs/
+*.log
+
+# Large datasets & raw image archives (Too large for Git / GitHub limits)
+AI_MOTO_DATASET/
+archive/
+car parts.v1i.yolov11/
+Bike parts.v1i.yolov11/
+*.zip
+*.tar.gz
+*.rar
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
